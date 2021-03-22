@@ -2,7 +2,7 @@
 In class exercise where we create a Sports store application so a user can buy products using sample code from our text book and the instructor. THIS IS A MSSA IN CLASS PROJECT FOR DEMINSTRATION PURPOSES ONLY! 
 
 ## Link To Book
-"https://www.apress.com/gp/book/9781484254394"
+https://www.apress.com/gp/book/9781484254394
 
 ## Build Script
 
