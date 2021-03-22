@@ -1,0 +1,9 @@
+dotnet --list-sdks
+
+dotnet new globaljson --sdk-version 5.0.104 --output SunnyDaysSportsSln/SunnyDaysSports
+dotnet new web --no-https --output SunnyDaysSportsSln/SunnyDaysSports --framework net5.0
+dotnet new sln -o SunnyDaysSportsSln
+dotnet sln SunnyDaysSportsSln add SunnyDaysSportsSln/SunnyDaysSports
+dotnet new xunit -o SunnyDaysSportsSln/SunnyDaysSports.Tests --framework net5.0
+dotnet sln SunnyDaysSportsSln add SunnyDaysSportsSln/SunnyDaysSports.Tests 
+dotnet add SunnyDaysSportsSln/SunnyDaysSports.Tests reference SunnyDaysSportsSln/SunnyDaysSports
