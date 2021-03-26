@@ -13,3 +13,6 @@ https://www.apress.com/gp/book/9781484254394
       dotnet new xunit -o SunnyDaysSportsSln/SunnyDaysSports.Tests --framework net5.0
       dotnet sln SunnyDaysSportsSln add SunnyDaysSportsSln/SunnyDaysSports.Tests 
       dotnet add SunnyDaysSportsSln/SunnyDaysSports.Tests reference SunnyDaysSportsSln/SunnyDaysSports
+
+## Progress Check
+![]
