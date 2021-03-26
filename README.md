@@ -16,8 +16,4 @@ https://www.apress.com/gp/book/9781484254394
 
 ## Progress Checks
 ![](Images/Part1.JPG)
-![](Images/Part2.JPG)
-![](Images/Part3.JPG)
-![](Images/Part4.JPG)
-![](Images/Part5.JPG)
-![](Images/Part6.JPG)
+
