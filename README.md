@@ -15,5 +15,5 @@ https://www.apress.com/gp/book/9781484254394
       dotnet add SunnyDaysSportsSln/SunnyDaysSports.Tests reference SunnyDaysSportsSln/SunnyDaysSports
 
 ## Progress Checks
-![](Images/Part1.JPG)
+![](Images/ProgressCheck1.jpg)
 
