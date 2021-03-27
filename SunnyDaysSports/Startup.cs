@@ -27,7 +27,8 @@ namespace SunnyDaysSports
             services.AddControllersWithViews();
             services.AddDbContext<StoreDbContext>(opts =>
             {
-                opts.UseSqlServer(Configuration["ConnectionStrings:SportsStoreConnection"]);
+                opts.UseSqlServer(
+                    Configuration["ConnectionStrings:SportsStoreConnection"]);
             });
             services.AddScoped<IStoreRepository, EFStoreRepository>();
         }
@@ -40,7 +41,6 @@ namespace SunnyDaysSports
             app.UseStaticFiles();
 
             app.UseRouting();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapDefaultControllerRoute();
