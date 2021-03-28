@@ -41,3 +41,5 @@ Scaffolding is the compiler creating code for cshtml and html documents with the
 ### Seeding the database:
 ![](Images/ProgressCheck2.jpg)
 
+### CSS styling and pagination:
+![]()
