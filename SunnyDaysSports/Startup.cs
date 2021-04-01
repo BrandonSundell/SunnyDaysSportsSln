@@ -31,6 +31,9 @@ namespace SunnyDaysSports
                     Configuration["ConnectionStrings:SportsStoreConnection"]);
             });
             services.AddScoped<IStoreRepository, EFStoreRepository>();
+            services.AddRazorPages();
+            services.AddDistributedMemoryCache();
+            services.AddSession();
         }
 
         
@@ -39,14 +42,31 @@ namespace SunnyDaysSports
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
             app.UseStaticFiles();
+            app.UseSession();
 
             app.UseRouting();
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute("pagination",
-                    "Products/Page{productPage}",
-                    new { Controller = "Home", action = "Index" });
+                endpoints.MapControllerRoute("catpage",
+                         "{category}/Page{productPage:int}",
+                         new { Controller = "Home", action = "Index" }
+                    );
+
+                endpoints.MapControllerRoute("page",
+                         "Page{productPage:int}",
+                         new { Controller = "Home", action = "Index", productPage = 1 }
+                    );
+
+                endpoints.MapControllerRoute("category",
+                         "{category}",
+                         new { Controller = "Home", action = "Index", productPage = 1 }
+                    );
+
+                endpoints.MapControllerRoute("pagination", "Products/Page{productPage}",
+                    new { Controller = "Home", action = "Index", productPage = 1 });
+
                 endpoints.MapDefaultControllerRoute();
+                endpoints.MapRazorPages();
             });
             SeedData.EnsurePopulated(app);
         }
